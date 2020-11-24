@@ -59,7 +59,7 @@ final class CurlFactory implements ClientFactory
             \curl_setopt($handle, CURLOPT_HTTPHEADER, $formattedHeaders);
 
             if (isset($options['timeout_ms'])) {
-                \curl_setopt($handle, CURLOPT_TIMEOUT, $options['timeout_ms']);
+                \curl_setopt($handle, CURLOPT_TIMEOUT_MS, $options['timeout_ms']);
             } else if (isset($options['timeout'])) {
                 \curl_setopt($handle, CURLOPT_TIMEOUT, $options['timeout']);
             }
